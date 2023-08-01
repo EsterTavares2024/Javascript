@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px; /* coloca o texto "interaja" bem no centro da caixa na altura de 200px*/
+        }
+    </style>
+</head>
+<body>
+   <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    interaja...
+
+   </div> 
+   <script>
+    var a = window.document.getElementById ('area'); //Ao se colocar essa variável fora dos blocos de functions, se pode usar ela para todas as functions sem precisar repetir
+    a.addEventListener ('click', clicar)
+    a.addEventListener ('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
+    function  clicar() {
+    a.innerText = 'Clicou!' //Ao se clicar, o texto "interaja mudará para Clicou!
+    a.style.background = 'red'
+    }
+
+    function entrar() {
+    a.innerText = 'Entrou!'
+    }
+
+    function sair() {
+        a.innerText = 'Saiu!'
+        a.style.background = 'green'
+    }
+</script>
+    <!--
+    1º - Se insere a ação que se quer dentro de Div, ou seja, onclick: ação clicar onmouseenter "Quando mouse entrar no bloco" onmouseout "Quando mouse sair do bloco". 2º - Se insere o bloco de function com o nome da ação inserida em "onclick", ou seja, clicar e as outras 2 também. 
+    // Quando o get element estiver no plural nas opções "Getelements precisa se usar colchetes".
+    -- Para deixar o HTML limpo e deixar os eventos DOM somente dentro do Script, podemos retirar esses itens que estavam do lado de Id= "área" :
+    onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"
+    e substituir eles por:
+
+    a.addEventListener ('click', clicar)
+    a.addEventListener ('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
+    ficando dentro do script do java
+     --> 
+
+</body>
+</html>

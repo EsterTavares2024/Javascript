@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(29, 103, 187);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1> Iniciando estudos com DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <p> Aprendendo a usar o <strong>DOM</strong> em javascript</p>
+    <div id="msg" name="mensagem"> Clique em mim</div>
+    <script>
+
+        window.document.write(window.document.URL);
+    
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+
+        var p1 = window.document.getElementsByTagName('p') [1]; 
+        window.document.write('Está escrito assim: ' + p1.innerText);
+        p1.style.color = 'orange' // muda a cor do 1º parágrafo pq para laranja
+        window.document.write(p1.innerHTML);
+
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando' //mudou o texto de clique em mim para estou aguardando somente com javascript
+
+        var d = window.document.getElementsByName('mensagem')[0];
+        d.innerText = 'Olá!' //mudou o texto de "Estou aguardando"para Olá! somente com javascript
+
+        var d = window.document.querySelector('div#msg'); 
+        d.style.background = 'blue'
+        
+     
+        //irá buscar e apresentar o texto do elemento do 1º parágrafo (cuja ordem começa em zero (0))
+       //innerText irá pegar somente o texto do elemento
+       //InnerHTML irá pegar o texto mais os estilos de Css
+       //Toda DIV/ID é representada por uma # e classe: .
+       
+    </script>
+</body>
+</html>

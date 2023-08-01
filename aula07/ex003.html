@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        Body {
+            background-color: aquamarine;
+            font: normal 20pt arial;
+            color: white;
+        }
+        <h1{
+            color:blue
+        }
+    </style>
+</head>
+<body>
+    <h>Olá, Mundo!</h>
+    <p> Já me livrei da Maldição</p>
+    <script>
+       var n1 = Number.parseInt (window.prompt('digite um número:'));
+       var n2 = Number.parseInt (window.prompt('Digite outro número:'));
+       var s = n1 + n2
+       window.alert('A soma dos valores é ' + s);
+       /* outra forma de dizer o mesmo acima com placeholder:
+       window.alert ( ` A soma entre ${n1} e ${n2} é igual a ${s});
+    </script>
+
+    <!-- + serve para adição quando for (number + number)
+    -- O + serve para concatenação (união de duas informações numa só frase) POREM: precisa ser (string+string)
+    --pra somar acima, precisa-se converter de string para número
+    -- O javascript é case sensitive
+    -- Para converter string pra número usamos:
+    -- Number.parseInt(n)
+    -- Number.parseFloat(n)
+    -- Number(n) síntese simples pra geral, o java irá decidir se o número é inteiro ou real/flutuante
+
+    Para converter número para string:
+    n.toString()
+    String(n). Exemplo: A soma dos valores é ' + String(s)) para converter o resultado numérico acima para string
+
+// Formatando Strings no node
+var s = 'Javascript'
+Eu estou aprendendo s' //Não faz interpolação
+'Eu estou aprendendo ' + s // Não usa concatenação
+
+Nova forma: [TEMPLATE STRINGS]
+'Eu estou aprendendo ${s}` (é uma crase e o cifrão com colchetes é chamado de placeholder) //Usa template string
+
+s.length // Quantos caracteres tem a string
+s.toUpperCase() //Tudo para 'MAIÚSCULAS'
+S.toLower.Case() // Tudo para 'minúsculas'--> 
+</body>
+</html>
